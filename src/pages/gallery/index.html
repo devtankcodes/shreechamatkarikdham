@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Basic Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <title>Photo Gallery | Shree Chamatkarik Dham</title>
+
+    <meta name="description"
+        content="Explore the beautiful photo gallery of Shree Chamatkarik Dham, Rajkot. View temple festivals, darshan, aarti, and special events.">
+
+    <meta name="robots" content="index,follow">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="src/assets/css/variables.css">
+    <link rel="stylesheet" href="src/assets/css/style.css">
+    <link rel="stylesheet" href="src/assets/css/gallery.css">
+    <link rel="stylesheet" href="src/assets/css/animations.css">
+    <link rel="stylesheet" href="src/assets/css/responsive.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- Header Component -->
+    <div id="header"></div>
+
+    <main>
+
+        <!-- ================= HERO ================= -->
+        <section class="gallery-hero">
+            <div class="container">
+                <h1>Temple Photo Gallery</h1>
+                <p>
+                    Explore the divine moments of
+                    <strong>Shree Chamatkarik Dham</strong>.
+                </p>
+            </div>
+        </section>
+
+        <!-- ================= FILTERS ================= -->
+        <section class="gallery-filter">
+            <div class="container">
+                <button class="active">All</button>
+                <button>Hanumanji</button>
+                <button>Mahadev</button>
+                <button>Shanidev</button>
+                <button>Ram Darbar</button>
+                <button>Shitla Mata</button>
+                <button>Festivals</button>
+                <button>Events</button>
+            </div>
+        </section>
+
+        <!-- ================= GALLERY ================= -->
+        <section class="gallery">
+            <div class="container">
+                <div class="gallery-grid">
+
+                    <!-- Image 1 -->
+                    <article class="gallery-card">
+                        <img src="../../assets/images/gallery/hanuman-001.webp" alt="Hanumanji Temple">
+                    </article>
+
+                    <!-- Image 2 -->
+                    <article class="gallery-card">
+                        <img src="../../assets/images/gallery/mahadev-001.webp" alt="Mahadev Temple">
+                    </article>
+
+                    <!-- Image 3 -->
+                    <article class="gallery-card">
+                        <img src="../../assets/images/gallery/shanidev-001.webp" alt="Shanidev Temple">
+                    </article>
+
+                    <!-- Image 4 -->
+                    <article class="gallery-card">
+                        <img src="../../assets/images/gallery/festival-001.webp" alt="Temple Festival">
+                    </article>
+
+                    <!-- Image 5 -->
+                    <article class="gallery-card">
+                        <img src="../../assets/images/gallery/aarti-001.webp" alt="Evening Aarti">
+                    </article>
+
+                    <!-- Image 6 -->
+                    <article class="gallery-card">
+                        <img src="../../assets/images/gallery/event-001.webp" alt="Temple Event">
+                    </article>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= LIGHTBOX ================= -->
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+
+        <button class="close-btn" aria-label="Close">
+
+            &times;
+
+        </button>
+
+        <button class="prev-btn" aria-label="Previous Image">
+
+            &#10094;
+
+        </button>
+
+        <img id="lightboxImage" src="" alt="Temple Photo">
+
+        <button class="next-btn" aria-label="Next Image">
+
+            &#10095;
+
+        </button>
+
+    </div>
+
+    <!-- Footer Component -->
+
+    <script src="src/assets/js/gallery.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,203 @@
+/* ==========================================
+   HEADER
+   ========================================== */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.header-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0.75rem 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ==========================================
+   LOGO
+   ========================================== */
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 2.5rem;
+}
+
+.logo-container a {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+}
+
+.logo-icon {
+    height: 90px;
+    width: auto;
+}
+
+/* .logo-text {
+    height: 55px;
+    width: auto;
+} */
+
+/* ==========================================
+   NAVIGATION
+   ========================================== */
+
+.primary-nav-bar {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    position: relative;
+
+    display: inline-block;
+
+    text-decoration: none;
+    color: #333333;
+
+    font-size: 1rem;
+    font-weight: 500;
+
+    padding: 0.5rem 0;
+
+    transition:
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+/* Hover */
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Active Link */
+
+.nav-links a.active {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.nav-links a.active::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+
+    width: 100%;
+    height: 2px;
+
+    background: var(--primary-color);
+}
+
+/* ==========================================
+   HAMBURGER
+   ========================================== */
+
+.hamburger {
+    display: none;
+
+    background: transparent;
+    border: none;
+
+    cursor: pointer;
+
+    font-size: 2rem;
+    color: #333333;
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+
+@media (max-width: 992px) {
+
+    .header-container {
+        padding: 1rem 1.5rem;
+    }
+
+    .logo-container img {
+        height: 60px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+
+        top: 100%;
+        left: 0;
+
+        width: 100%;
+
+        display: none;
+        flex-direction: column;
+        align-items: center;
+
+        gap: 0;
+
+        background: #ffffff;
+
+        box-shadow: 0 8px 16px rgba(0,0,0,.08);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        width: 100%;
+
+        padding: 1rem 2rem;
+        text-align: center;
+
+        border-bottom: 1px solid #eeeeee;
+    }
+
+    .nav-links a.active::after {
+        display: none;
+    }
+}
+
+/* Header shadow while scrolling */
+
+.header {
+    transition: box-shadow 0.3s ease;
+}
+
+.header.scrolled {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<browserconfig>
+
+    <msapplication>
+
+        <tile>
+
+            <!-- Windows Tile Logo -->
+            <square150x150logo src="/mstile-150x150.png"/>
+
+            <!-- Tile Background Color -->
+            <TileColor>#FF6B00</TileColor>
+
+        </tile>
+
+    </msapplication>
+
+</browserconfig>

@@ -1,0 +1,40 @@
+{
+  "id": "/",
+  "name": "Shree Chamatkarik Dham",
+  "short_name": "Chamatkarik Dham",
+  "description": "Official website of Shree Chamatkarik Dham (Chamatkarik Hanumanji Mandir), Rajkot, Gujarat. Explore temple information, darshan timings, aarti schedule, festivals, gallery, donations, and more.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#FFF8F0",
+  "theme_color": "#E65100",
+  "lang": "en-IN",
+  "dir": "ltr",
+  "categories": [
+    "religion",
+    "lifestyle",
+    "education",
+    "travel"
+  ],
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/maskable-icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
