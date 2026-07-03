@@ -1,230 +1,742 @@
-/* ==========================
-   GALLERY HERO
-========================== */
+/* ==========================================================
+   GALLERY PAGE
+   ========================================================== */
+
+/* ===========================
+   Hero Section
+=========================== */
 
 .gallery-hero {
-    background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
-        url("../images/gallery/banner.webp") center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 75vh;
+    padding: 140px 0 100px;
+    overflow: hidden;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.65)),
+        url("/src/assets/images/gallery/gallery-hero.webp")
+        center center/cover no-repeat;
+}
+
+.gallery-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(circle at top right,
+            rgba(255, 153, 0, .18),
+            transparent 45%);
+
+    pointer-events: none;
+}
+
+.gallery-hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 760px;
     color: #fff;
-    padding: 100px 20px;
+}
+
+.gallery-hero-content h1 {
+    margin: 22px 0 24px;
+
+    font-size: clamp(2.4rem, 5vw, 4.4rem);
+    line-height: 1.15;
+    font-weight: 800;
+    letter-spacing: -.5px;
+}
+
+.gallery-hero-content p {
+    max-width: 640px;
+
+    font-size: 1.15rem;
+    line-height: 1.8;
+
+    color: rgba(255,255,255,.92);
+
+    margin-bottom: 40px;
+}
+
+/* ===========================
+   Section Badge
+=========================== */
+
+.section-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 10px 18px;
+
+    border-radius: 50px;
+
+    font-size: .95rem;
+    font-weight: 600;
+
+    color: #fff;
+
+    backdrop-filter: blur(12px);
+
+    background: rgba(255,255,255,.12);
+
+    border: 1px solid rgba(255,255,255,.18);
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.15);
+}
+
+.section-badge i {
+    color: #FFD54F;
+}
+
+/* ===========================
+   Section Header
+=========================== */
+
+.section-header {
+    max-width: 760px;
+
+    margin: 0 auto 70px;
+
     text-align: center;
 }
 
-.gallery-hero h1 {
-    font-size: 3rem;
-    margin-bottom: 15px;
+.section-header h2 {
+    margin: 24px 0;
+
+    font-size: clamp(2rem,4vw,3rem);
+
+    color: #222;
 }
 
-.gallery-hero p {
-    font-size: 1.1rem;
-    max-width: 650px;
-    margin: auto;
-    line-height: 1.8;
+.section-header p {
+
+    font-size: 1.05rem;
+
+    line-height: 1.9;
+
+    color: #666;
 }
 
-/* ==========================
-   FILTER BUTTONS
-========================== */
+/* ===========================
+   Buttons
+=========================== */
 
-.gallery-filter {
-    padding: 40px 20px;
-    background: #fff;
-}
-
-.gallery-filter .container {
-    display: flex;
-    flex-wrap: wrap;
+.btn {
+    display: inline-flex;
+    align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: 10px;
+
+    padding: 15px 32px;
+
+    border-radius: 10px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: .35s ease;
 }
 
-.gallery-filter button {
-    padding: 12px 24px;
-    border: none;
-    border-radius: 40px;
-    background: #f2f2f2;
-    cursor: pointer;
-    font-size: 15px;
-    transition: .3s;
-}
-
-.gallery-filter button:hover,
-.gallery-filter button.active {
-    background: #ff6b00;
+.btn-primary {
     color: #fff;
+
+    background: linear-gradient(
+        135deg,
+        #FF9800,
+        #E65100
+    );
+
+    box-shadow:
+        0 15px 35px
+        rgba(230,81,0,.30);
 }
 
-/* ==========================
-   GALLERY
-========================== */
+.btn-primary:hover {
 
-.gallery {
-    padding: 70px 20px;
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 20px 45px
+        rgba(230,81,0,.40);
 }
+
+.btn-secondary {
+
+    color: #fff;
+
+    background: #212121;
+}
+
+.btn-secondary:hover {
+
+    background: #000;
+
+    transform: translateY(-4px);
+}
+
+.btn-outline {
+
+    color: #E65100;
+
+    background: transparent;
+
+    border: 2px solid #E65100;
+}
+
+.btn-outline:hover {
+
+    color: #fff;
+
+    background: #E65100;
+
+    transform: translateY(-4px);
+}
+
+/* ===========================
+   Common Section Spacing
+=========================== */
+
+.gallery-section,
+.visit-temple {
+
+    padding: 100px 0;
+}
+
+/* ==========================================================
+   GALLERY SECTION
+========================================================== */
+
+.gallery-section {
+    background: #fafafa;
+}
+
+/* ===========================
+   Gallery Grid
+=========================== */
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
-    gap: 25px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
 }
 
-/* ==========================
-   CARD
-========================== */
+/* ===========================
+   Gallery Card
+=========================== */
 
-.gallery-card {
-    overflow: hidden;
-    border-radius: 15px;
-    background: #fff;
-    cursor: pointer;
-    box-shadow: 0 10px 30px rgba(0,0,0,.08);
-    transition: .35s;
-}
-
-.gallery-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(0,0,0,.15);
-}
-
-.gallery-card img {
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
+.gallery-item {
+    position: relative;
     display: block;
-    transition: .4s;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background: #fff;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+    text-decoration: none;
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
 }
 
-.gallery-card:hover img {
-    transform: scale(1.08);
+/* ===========================
+   Gallery Image
+=========================== */
+
+.gallery-item img {
+    display: block;
+
+    width: 100%;
+    height: 300px;
+
+    object-fit: cover;
+
+    transition: transform .6s ease;
 }
 
-/* ==========================
-   LIGHTBOX
-========================== */
+/* ===========================
+   Overlay
+=========================== */
 
-.lightbox {
-    position: fixed;
+.gallery-overlay {
+    position: absolute;
     inset: 0;
-    background: rgba(0,0,0,.9);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 99999;
-}
 
-.lightbox.active {
     display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(
+        rgba(230, 81, 0, .15),
+        rgba(0, 0, 0, .65)
+    );
+
+    opacity: 0;
+
+    transition: opacity .35s ease;
 }
 
-.lightbox img {
-    width: 90%;
-    max-width: 900px;
-    max-height: 85vh;
-    object-fit: contain;
-    border-radius: 10px;
-}
+/* ===========================
+   Expand Icon
+=========================== */
 
-/* ==========================
-   CLOSE BUTTON
-========================== */
+.gallery-overlay i {
+    width: 62px;
+    height: 62px;
 
-.close-btn {
-    position: absolute;
-    top: 30px;
-    right: 40px;
-    font-size: 45px;
-    color: white;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-/* ==========================
-   NAV BUTTONS
-========================== */
-
-.prev-btn,
-.next-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 55px;
-    height: 55px;
-    border: none;
     border-radius: 50%;
-    font-size: 26px;
-    cursor: pointer;
-    background: rgba(255,255,255,.2);
-    color: white;
-    transition: .3s;
+
+    font-size: 1.4rem;
+
+    color: #fff;
+
+    background: rgba(255,255,255,.18);
+
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255,255,255,.25);
+
+    transform: scale(.75);
+
+    transition: .35s ease;
 }
 
-.prev-btn:hover,
-.next-btn:hover {
-    background: #ff6b00;
+/* ===========================
+   Hover Effects
+=========================== */
+
+.gallery-item:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.18);
 }
 
-.prev-btn {
-    left: 35px;
+.gallery-item:hover img {
+    transform: scale(1.12);
 }
 
-.next-btn {
-    right: 35px;
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
 }
 
-/* ==========================
-   RESPONSIVE
-========================== */
+.gallery-item:hover .gallery-overlay i {
+    transform: scale(1);
+}
 
-@media (max-width:992px){
+/* ===========================
+   Focus Accessibility
+=========================== */
 
-    .gallery-hero h1{
-        font-size:2.5rem;
+.gallery-item:focus-visible {
+    outline: 3px solid #E65100;
+    outline-offset: 4px;
+}
+
+/* ===========================
+   Image Loading Animation
+=========================== */
+
+.gallery-item img {
+    animation: galleryFade .7s ease;
+}
+
+@keyframes galleryFade {
+
+    from {
+        opacity: 0;
+        transform: scale(.96);
     }
 
-    .gallery-grid{
-        grid-template-columns:repeat(2,1fr);
+    to {
+        opacity: 1;
+        transform: scale(1);
     }
 
 }
 
-@media (max-width:768px){
+/* ==========================================================
+   VISIT TEMPLE CTA
+========================================================== */
 
-    .gallery-hero{
-        padding:70px 20px;
+.visit-temple {
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            rgba(230, 81, 0, .92),
+            rgba(191, 54, 12, .92)
+        ),
+        url("/src/assets/images/visit-temple.webp")
+        center center/cover no-repeat;
+
+    color: #fff;
+}
+
+/* Decorative Circles */
+
+.visit-temple::before,
+.visit-temple::after {
+    content: "";
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.08);
+
+    pointer-events: none;
+}
+
+.visit-temple::before {
+    width: 320px;
+    height: 320px;
+
+    top: -120px;
+    right: -100px;
+}
+
+.visit-temple::after {
+    width: 220px;
+    height: 220px;
+
+    left: -70px;
+    bottom: -70px;
+}
+
+/* ===========================
+   Content
+=========================== */
+
+.visit-temple-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 900px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+/* Badge */
+
+.visit-temple .section-badge {
+    margin-bottom: 22px;
+}
+
+/* Heading */
+
+.visit-temple h2 {
+    margin-bottom: 24px;
+
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+
+    line-height: 1.2;
+
+    color: #fff;
+}
+
+/* Description */
+
+.visit-temple p {
+    max-width: 720px;
+
+    margin: 0 auto 45px;
+
+    font-size: 1.1rem;
+
+    line-height: 1.9;
+
+    color: rgba(255,255,255,.92);
+}
+
+/* ===========================
+   Button Container
+=========================== */
+
+.visit-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 18px;
+
+    flex-wrap: wrap;
+}
+
+/* ===========================
+   CTA Buttons
+=========================== */
+
+.visit-buttons .btn {
+
+    min-width: 210px;
+
+    padding: 16px 34px;
+
+    border-radius: 12px;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    transition: all .35s ease;
+}
+
+/* Primary */
+
+.visit-buttons .btn-primary {
+
+    background: #fff;
+
+    color: #E65100;
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.18);
+}
+
+.visit-buttons .btn-primary:hover {
+
+    transform: translateY(-6px);
+
+    background: #FFF3E0;
+}
+
+/* Secondary */
+
+.visit-buttons .btn-secondary {
+
+    background: rgba(255,255,255,.14);
+
+    color: #fff;
+
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255,255,255,.18);
+}
+
+.visit-buttons .btn-secondary:hover {
+
+    background: rgba(255,255,255,.25);
+
+    transform: translateY(-6px);
+}
+
+/* Outline */
+
+.visit-buttons .btn-outline {
+
+    color: #fff;
+
+    border: 2px solid rgba(255,255,255,.45);
+
+    background: transparent;
+}
+
+.visit-buttons .btn-outline:hover {
+
+    background: rgba(255,255,255,.12);
+
+    transform: translateY(-6px);
+}
+
+/* Icons */
+
+.visit-buttons i {
+
+    font-size: 1rem;
+}
+
+/* Button Active */
+
+.visit-buttons .btn:active {
+
+    transform: scale(.97);
+}
+
+/* ==========================================================
+   RESPONSIVE DESIGN
+========================================================== */
+
+/* ===========================
+   Large Laptop
+=========================== */
+
+@media (max-width: 1200px) {
+
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 
-    .gallery-hero h1{
-        font-size:2rem;
+    .gallery-hero {
+        min-height: 70vh;
     }
 
-    .gallery-grid{
-        grid-template-columns:1fr;
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media (max-width: 992px) {
+
+    .gallery-hero {
+        min-height: 65vh;
+        padding: 120px 0 80px;
+        text-align: center;
     }
 
-    .gallery-card img{
-        height:240px;
+    .gallery-hero-content {
+        max-width: 100%;
     }
 
-    .prev-btn,
-    .next-btn{
-        width:45px;
-        height:45px;
-        font-size:22px;
+    .gallery-hero-content p {
+        margin-inline: auto;
     }
 
-    .prev-btn{
-        left:10px;
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 
-    .next-btn{
-        right:10px;
+    .section-header {
+        margin-bottom: 50px;
     }
 
-    .close-btn{
-        top:15px;
-        right:20px;
-        font-size:36px;
+    .visit-buttons {
+        justify-content: center;
+    }
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width: 768px) {
+
+    .gallery-section,
+    .visit-temple {
+        padding: 80px 0;
+    }
+
+    .gallery-hero {
+        min-height: 60vh;
+        padding: 110px 0 70px;
+    }
+
+    .gallery-hero-content h1 {
+        margin: 18px 0;
+    }
+
+    .gallery-hero-content p {
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 32px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .gallery-item img {
+        height: 220px;
+    }
+
+    .visit-temple h2 {
+        line-height: 1.3;
+    }
+
+    .visit-temple p {
+        font-size: 1rem;
+    }
+
+    .visit-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .visit-buttons .btn {
+        width: 100%;
+        max-width: 340px;
+    }
+
+}
+
+/* ===========================
+   Small Mobile
+=========================== */
+
+@media (max-width: 576px) {
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item img {
+        height: 260px;
+    }
+
+    .section-header p,
+    .gallery-hero-content p,
+    .visit-temple p {
+        font-size: .97rem;
+    }
+
+    .section-badge {
+        font-size: .85rem;
+        padding: 8px 16px;
+    }
+
+}
+
+/* ===========================
+   Accessibility
+=========================== */
+
+:focus-visible {
+    outline: 3px solid #E65100;
+    outline-offset: 3px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ===========================
+   Reduced Motion
+=========================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
     }
 
 }

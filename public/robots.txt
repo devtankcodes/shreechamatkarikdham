@@ -1,6 +1,6 @@
 # ======================================================
 # Shree Chamatkarik Dham
-# https://www.shreechamatkarikdham.org
+# https://www.shreechamatkarikdham.org/
 # ======================================================
 
 User-agent: *
@@ -11,7 +11,6 @@ Allow: /
 # Block system folders
 Disallow: /backend/
 Disallow: /config/
-Disallow: /src/
 
 # Sitemap
 Sitemap: https://www.shreechamatkarikdham.org/sitemap.xml

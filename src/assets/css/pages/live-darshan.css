@@ -558,27 +558,19 @@
 ====================================================== */
 
 .donation-section{
-
     background:linear-gradient(
         135deg,
         #fff7ef,
         #ffffff
     );
-
     text-align: center;
-
 }
 
 .donation-section p{
-
     max-width:760px;
-
     margin:0 auto 35px;
-
     font-size:1.1rem;
-
     color:#555;
-
 }
 
 .donation-section .btn-primary{

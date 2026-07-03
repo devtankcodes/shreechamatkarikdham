@@ -30,19 +30,23 @@
     <link rel="manifest" href="/manifest.webmanifest">
 
     <!-- Basic SEO Meta tags -->
-    <meta name="description" content="Visit Shree Chamatkarik Dham, a sacred Hanumanji temple in Rajkot. View live darshan, temple timings, gallery, donations, festivals, and spiritual updates.">
-    <meta name="keywords" content="Hanuman Temple, Rajkot Temple, Shree Chamatkarik Dham, Hanumanji, Mahadev Temple, Hindu Temple, Gujarat Temple">
+    <meta name="description"
+        content="Visit Shree Chamatkarik Dham, a sacred Hanumanji temple in Rajkot. View live darshan, temple timings, gallery, donations, festivals, and spiritual updates.">
+    <meta name="keywords"
+        content="Hanuman Temple, Rajkot Temple, Shree Chamatkarik Dham, Hanumanji, Mahadev Temple, Hindu Temple, Gujarat Temple">
     <meta name="author" content="Shree Chamatkarik Dham">
     <meta name="robots" content="index,follow,max-image-preview:large">
     <meta name="geo.region" content="IN-GJ">
     <meta name="geo.placename" content="Rajkot">
-    <meta name="geo.position" content="22.3039;70.8022">
-    <meta name="ICBM" content="22.3039,70.8022">
+    <meta name="geo.position" content="22.276056, 70.759250">
+    <meta name="ICBM" content="22.276056, 70.759250">
+    <meta name="copyright" content="Shree Chamatkarik Dham">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Home | Shreechamatkarikdham">
-    <meta property="og:description" content="Visit Shree Chamatkarik Dham, a sacred Hanumanji temple in Rajkot. View live darshan, temple timings, gallery, donations, festivals, and spiritual updates.">
+    <meta property="og:description"
+        content="Visit Shree Chamatkarik Dham, a sacred Hanumanji temple in Rajkot. View live darshan, temple timings, gallery, donations, festivals, and spiritual updates.">
     <meta property="og:url" content="https://shreechamatkarikdham.org/">
     <meta property="og:image" content="https://shreechamatkarikdham.org/assets/images/og-image.webp">
     <meta property="og:image:type" content="image/webp">
@@ -55,7 +59,8 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Home | Shreechamatkarikdham">
-    <meta name="twitter:description" content="Visit Shree Chamatkarik Dham, a sacred Hanumanji temple in Rajkot. View live darshan, temple timings, gallery, donations, festivals, and spiritual updates.">
+    <meta name="twitter:description"
+        content="Visit Shree Chamatkarik Dham, a sacred Hanumanji temple in Rajkot. View live darshan, temple timings, gallery, donations, festivals, and spiritual updates.">
     <meta name="twitter:image" content="https://shreechamatkarikdham.org/assets/images/og-image.webp">
     <meta name="twitter:image:alt" content="Shree Chamatkarik Dham Temple">
     <meta name="twitter:site" content="@shreechamatkarikdham">
@@ -113,20 +118,22 @@
         <!-- Hero -->
         <section class="hero">
             <div class="hero-content">
-                <h1>श्री चमत्कारिक धाम</h1>
-                <p>" पूरे राजकोट में एक ही नाम जय श्री चमत्कारिक धाम "</p>
-                <a href="/src/assets/images/Hero_Image.jpeg"></a>
-            </div>
 
-            <div class="hero-buttons">
+                <h1 class="hero-title">श्री चमत्कारिक धाम</h1>
+                <p class="hero-description">
+                    " पूरे राजकोट में एक ही नाम जय श्री चमत्कारिक धाम "
+                </p>
 
-                <a href="/src/pages/live-darshan/" class="btn btn-primary">
-                    Live Darshan
-                </a>
-
-                <a href="/src/pages/donation/" class="btn btn-secondary">
-                    Donate Now
-                </a>
+                <div class="hero-buttons">
+                    <a href="/src/pages/live-darshan/" class="btn btn-primary">
+                        <i class="fa-solid fa-video"></i>
+                        Live Darshan
+                    </a>
+                    <a href="/src/pages/donation/" class="btn btn-secondary">
+                        <i class="fa-solid fa-hand-holding-heart"></i>
+                        Donate Now
+                    </a>
+                </div>
 
             </div>
         </section>
@@ -143,15 +150,11 @@
                     <ul class="timing-list">
                         <li>
                             Morning Darshan
-                            <span>07:00 AM - 09:00 AM</span>
+                            <span>06:00 AM - 1:00 PM</span>
                         </li>
                         <li>
                             Evening Darshan
-                            <span>04:00 PM - 05:00 PM</span>
-                        </li>
-                        <li>
-                            Sandhya Darshan
-                            <span>05:00 PM - 07:00 PM</span>
+                            <span>04:00 PM - 07:00 PM</span>
                         </li>
                         <li>
                             Night Darshan
@@ -175,10 +178,10 @@
                     <ul class="timing-list">
                         <li>
                             Mangal Aarti
-                            <span>06:00 AM</span>
+                            <span>07:00 AM</span>
                         </li>
                         <li>
-                            Shringar Aarti
+                            Shandhya Aarti
                             <span>07:00 PM</span>
                         </li>
                     </ul>
@@ -196,7 +199,7 @@
                         <h2>Live Darshan</h2>
                         <p>
                             Join devotees around the world and watch
-                            the live darshan of Shree Chamatkarik Hanumanji Maharaj.
+                            the live darshan of <strong>Shree Chamatkarik Hanumanji Maharaj.</strong>
                             Experience the divine atmosphere from anywhere.
                         </p>
                         <a href="/src/pages/live-darshan/" class="btn btn-primary">
@@ -205,8 +208,7 @@
                     </div>
 
                     <div class="live-video">
-                        <iframe src="https://www.youtube.com/embed/live_stream?channel=YOUR_CHANNEL_ID"
-                            title="Live Darshan" allowfullscreen>
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Live Darshan" allowfullscreen>
                         </iframe>
                     </div>
 
@@ -279,8 +281,10 @@
                     Visit Our Temple
                 </h2>
 
-                <iframe src="YOUR_GOOGLE_MAP_EMBED_LINK" width="100%" height="450" style="border:0;" loading="lazy"
-                    allowfullscreen referrerpolicy="no-referrer-when-downgrade">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d475.02979826481345!2d70.7592686917185!3d22.275984922325602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959cbb57e43607b%3A0x68b1fcdf8898bebd!2sChamtkarik%20Hanuman%20Mandir%20Trust!5e0!3m2!1sen!2sin!4v1783070742597!5m2!1sen!2sin"
+                    width="100%" height="550" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin">
                 </iframe>
 
             </div>
@@ -299,4 +303,5 @@
     <script src="/src/assets/js/components/footer.js" defer></script>
 
 </body>
+
 </html>
