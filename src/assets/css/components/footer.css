@@ -1,0 +1,218 @@
+/* ===========================
+   FOOTER
+=========================== */
+
+footer {
+    background: #111827;
+    color: #f3f4f6;
+    margin-top: 4rem;
+    border-top: 4px solid #ff9800;
+}
+
+.footer-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 3rem;
+}
+
+/* ===========================
+   Headings
+=========================== */
+
+.footer-inner h3 {
+    color: #ffffff;
+    font-size: 1.25rem;
+    margin-bottom: 1.2rem;
+    position: relative;
+    font-weight: 700;
+}
+
+.footer-inner h3::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 3px;
+    background: #ff9800;
+    margin-top: 10px;
+    border-radius: 50px;
+}
+
+/* ===========================
+   Lists
+=========================== */
+
+.footer-inner ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-inner li {
+    margin-bottom: 0.85rem;
+}
+
+/* ===========================
+   Links
+=========================== */
+
+.footer-inner a {
+    color: #d1d5db;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    word-break: break-word;
+}
+
+.footer-inner a:hover {
+    color: #ff9800;
+    transform: translateX(5px);
+}
+
+/* ===========================
+   Quick Links
+=========================== */
+
+.footer-nav-list li a {
+    font-size: 0.97rem;
+}
+
+/* ===========================
+   Social Links
+=========================== */
+
+.footer-social-links li a {
+    font-size: 1rem;
+}
+
+.footer-social-links i {
+    width: 22px;
+    text-align: center;
+    color: #ff9800;
+    font-size: 1.1rem;
+}
+
+/* ===========================
+   Donation
+=========================== */
+
+.footer-donation-methods li {
+    color: #d1d5db;
+    padding: 6px 0;
+}
+
+/* ===========================
+   Contact
+=========================== */
+
+.footer-contact-list li {
+    line-height: 1.7;
+    color: #d1d5db;
+}
+
+.footer-contact strong {
+    color: #ffffff;
+}
+
+.footer-contact a {
+    display: inline;
+}
+
+/* ===========================
+   Footer Bottom
+=========================== */
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding: 1.4rem;
+    text-align: center;
+    background: #0f172a;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.92rem;
+    color: #9ca3af;
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media (max-width: 992px) {
+
+    .footer-inner {
+        gap: 2.5rem;
+        padding: 3rem 1.5rem;
+    }
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width: 768px) {
+
+    .footer-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-inner h3::after {
+        margin: 10px auto 0;
+    }
+
+    .footer-inner a {
+        justify-content: center;
+    }
+
+    .footer-social-links i {
+        width: auto;
+    }
+
+}
+
+/* ===========================
+   Small Mobile
+=========================== */
+
+@media (max-width:480px) {
+
+    .footer-inner {
+        padding: 2.5rem 1rem;
+    }
+
+    .footer-inner h3 {
+        font-size: 1.15rem;
+    }
+
+    .footer-bottom {
+        font-size: 0.85rem;
+        padding: 1rem;
+    }
+
+}
+
+/* ===========================
+   Accessibility
+=========================== */
+
+.footer-inner a:focus-visible {
+    outline: 2px solid #ff9800;
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+/* ===========================
+   Smooth Animation
+=========================== */
+
+.footer-inner a,
+.footer-social-links i {
+    transition: all .3s ease;
+}
