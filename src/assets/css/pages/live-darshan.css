@@ -639,48 +639,31 @@
    COMMON SECTION HEADINGS
 ====================================================== */
 
+.donation-section .container,
+.youtube-section .container {
+    text-align: center;
+}
+
 .donation-section h2,
-.youtube-section h2{
-
-    position:relative;
-
-    display:inline-block;
-
-    left:50%;
-
-    transform:translateX(-50%);
-
-    padding-bottom:12px;
-
-    margin-bottom:30px;
-
+.youtube-section h2 {
+    display: block;
+    position: static;
+    transform: none;
+    left: auto;
+    margin: 0 auto 30px;
 }
 
 .donation-section h2::after,
-.youtube-section h2::after{
-
-    content:"";
-
-    position:absolute;
-
-    left:50%;
-
-    bottom:0;
-
-    transform:translateX(-50%);
-
-    width:80px;
-
-    height:4px;
-
-    border-radius:10px;
-
-    background:linear-gradient(
-        90deg,
-        var(--primary),
-        var(--gold)
-    );
-
+.youtube-section h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, var(--primary), var(--gold));
 }
 
 /* ======================================================

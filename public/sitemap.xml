@@ -1,37 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>https://www.shreechamatkarikdham.org/</loc>
+        <loc>https://shreechamatkarikdham.org/</loc>
         <lastmod>2026-07-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://www.shreechamatkarikdham.org/about/</loc>
-        <lastmod>2026-07-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-
-    <url>
-        <loc>https://www.shreechamatkarikdham.org/gallery/</loc>
+        <loc>https://shreechamatkarikdham.org/live-darshan/</loc>
         <lastmod>2026-07-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
-        <loc>https://www.shreechamatkarikdham.org/donation/</loc>
+        <loc>https://shreechamatkarikdham.org/about/</loc>
         <lastmod>2026-07-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
-        <loc>https://www.shreechamatkarikdham.org/contact/</loc>
+        <loc>https://shreechamatkarikdham.org/gallery/</loc>
+        <lastmod>2026-07-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://shreechamatkarikdham.org/donation/</loc>
+        <lastmod>2026-07-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://shreechamatkarikdham.org/contact/</loc>
         <lastmod>2026-07-01</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.8</priority>
